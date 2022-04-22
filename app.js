@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 //==================Index Route======================
 app.get('/', (req, res) => {
-	res.send('Hello, from Cloverleaf');
+	res.render('home');
 });
 
 //==================Port=============================
