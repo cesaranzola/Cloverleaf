@@ -6,7 +6,7 @@ const methodOverRide = require('method-override');
 const res = require('express/lib/response');
 
 //==================Index Route======================
-app.set('/', (req, res) => {
+app.get('/', (req, res) => {
 	res.send('Hello, from Cloverleaf');
 });
 
