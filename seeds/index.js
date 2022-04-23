@@ -17,9 +17,8 @@ db.once('open', () => {
 });
 
 //========================Custom descriptors ==================
-const sample = (array) => Array[Math.floor(Math.random() * Array.length)];
+const sample = (array) => array[Math.floor(Math.random() * array.length)];
 
-Array[Math.floor(Math.random() * Array.length)];
 //====================Delete everything inside the DB==========
 const seedDB = async () => {
 	await Campground.deleteMany({});
@@ -33,4 +32,6 @@ const seedDB = async () => {
 	}
 };
 
-seedDB();
+seedDB().then(() => {
+	mongoose.connection.close();
+});
