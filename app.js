@@ -31,7 +31,12 @@ app.get('/', (req, res) => {
 //===================Campground route================
 app.get('/campgrounds', async (req, res) => {
 	const campgrounds = await Campground.find();
-	res.render('campgrounds/index');
+	res.render('campgrounds/index', {campgrounds});
+});
+
+//===================Campground getById==============
+app.get('/campgrounds/:id', async (req, res) => {
+	res.render('campgrounds/show');
 });
 //==================Port=============================
 app.listen(3000, () => {
