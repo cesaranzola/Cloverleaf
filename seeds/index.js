@@ -16,6 +16,10 @@ db.once('open', () => {
 	console.log('Database connected');
 });
 
+//========================Custom descriptors ==================
+const sample = (array) => Array[Math.floor(Math.random() * Array.length)];
+
+Array[Math.floor(Math.random() * Array.length)];
 //====================Delete everything inside the DB==========
 const seedDB = async () => {
 	await Campground.deleteMany({});
@@ -23,6 +27,7 @@ const seedDB = async () => {
 		const random1000 = Math.floor(Math.random() * 1000);
 		const camp = new Campground({
 			location: `${cities[random1000].city}, ${cities[random1000].state}`,
+			title: `${sample(descriptors)} ${sample(places)}`,
 		});
 		await camp.save();
 	}
