@@ -11,4 +11,4 @@ const CampGroundSchema = new Schema({
 });
 
 //==============Module Export================
-module.exports = mongoose.model('Campground', CampGroundSchemal);
+module.exports = mongoose.model('Campground', CampGroundSchema);
