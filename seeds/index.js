@@ -1,8 +1,8 @@
 //=====================Require=======================
-const {random} = require('colors');
 const {default: mongoose} = require('mongoose');
-const Campground = require('../models/campground');
 const cities = require('./cities');
+const {places, descriptors} = require('./seedHelpers');
+const Campground = require('../models/campground');
 
 //===================Mongoose========================
 mongoose.connect('mongodb://localhost:27017/cloverleaf', {
