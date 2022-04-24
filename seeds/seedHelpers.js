@@ -1,4 +1,4 @@
-module.exports.descriptors = [
+fmodule.exports.descriptors = [
     'Forest',
     'Ancient',
     'Petrified',

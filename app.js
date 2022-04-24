@@ -24,18 +24,18 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
 
 //==================Index Route======================
-app.get('/', (req, res) => {
+app('/', (req, res) => {
 	res.render('home');
 });
 
 //===================Campground route================
-app.get('/campgrounds', async (req, res) => {
+app('/campgrounds', async (req, res) => {
 	const campgrounds = await Campground.find();
 	res.render('campgrounds/index', {campgrounds});
 });
 
 //===================Campground getById==============
-app.get('/campgrounds/:id', async (req, res) => {
+app('/campgrounds/:id', async (req, res) => {
 	res.render('campgrounds/show');
 });
 //==================Port=============================
