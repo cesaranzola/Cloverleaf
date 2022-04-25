@@ -10,7 +10,7 @@ const Campground = require('./models/campground');
 //===================Mongoose========================
 mongoose.connect('mongodb://localhost:27017/cloverleaf', {
 	useNewUrlParser: true,
-	useUnifiedTopology: true,
+	useUnifiedTopology: true, 
 });
 
 const db = mongoose.connection;
@@ -25,7 +25,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 //==================Index Route======================
 app('/', (req, res) => {
-	res.render('home');
+	res.render('home'); 
 });
 
 //===================Campground route================
